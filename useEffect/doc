@@ -1,0 +1,15 @@
+- useEffect is executed only after the component renders
+- used to perform any side effects such as data fetching, event listeners, timers/intervals, clean-up operations
+
+
+what is a sideeffect?
+-------------------------
+- The primary purpose of a component is to render a modal-static
+- All functions like onclick, onnavigate etc are all called form the render, so they do not qualify as a side-effect
+-whereas data fetching is called as a side effect because 
+  - they are not directly related to component render
+  - something that will happen later in the component and not during the initial render process. 
+
+useEffect can be used to synchronise the prop values.
+
+when we specify the dependency array in the useEffect react will execute this only when the values in the useEffect changes.
