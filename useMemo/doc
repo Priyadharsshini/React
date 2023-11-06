@@ -1,0 +1,19 @@
+- useMemo is a built-in hook provied by React, to <b> optimize the performance of react applications by memoizing te expensive computations</b>.
+- Returns the cached result when the same input occur again 
+
+- used to improve performance by caching results of expensive functions, which prevents unnecessary re-execution
+of functions on each render. 
+
+- specifically useful when component re-renders frequently or when expensive operations are involved. 
+
+<b> BASIC SYNTAX </b>
+
+const memoizedValue = useMemo(() => {
+  //some expensive cal
+  return value;
+},[dependency1, dependency2, ...]);
+
+-> First arguement is the function that does the expensive calculation, that we need to memoize
+-> The second argument is the array of dependencies. when any of the values in this array changes, the memoized value wil be recalculated. 
+If the dependency value does not change, previous value will be returned. 
+
